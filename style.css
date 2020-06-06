@@ -49,6 +49,7 @@ nav{
     background-color: white;
     margin: 5px;
     border-radius: 1rem;
+    transition: all 0.3s ease-in-out 0.1s;
 }
 
 @media screen and (max-width: 1300px) {
@@ -85,7 +86,32 @@ nav{
     }
 }
 
-.nav.active{
+.nav-active{
     transform: translateX(0%);
 }
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
 
